@@ -25,6 +25,7 @@ public class ExplosiveArrows extends JavaPlugin implements Listener {
 	float power;
 	boolean setFire;
 	boolean breakBlocks;
+	int recipeAmount;
 	
 	@Override
 	public void onEnable() {
@@ -37,10 +38,11 @@ public class ExplosiveArrows extends JavaPlugin implements Listener {
 		power = (float)config.getDouble("power");
 		setFire = config.getBoolean("set-fire");
 		breakBlocks = config.getBoolean("break-blocks");
+		recipeAmount = config.getInt("recipe-amount");
 		
 		saveDefaultConfig();
 		
-		explosiveArrow = new ItemStack(Material.ARROW);
+		explosiveArrow = new ItemStack(Material.ARROW, recipeAmount);
 		itemMeta = explosiveArrow.getItemMeta();
 		itemMeta.setLore(Arrays.asList("Explosive"));
 		explosiveArrow.setItemMeta(itemMeta);

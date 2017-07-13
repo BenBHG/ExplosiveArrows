@@ -1,3 +1,4 @@
 power: 2.0
 set-fire: true
 break-blocks: true
+recipe-amount: 4
