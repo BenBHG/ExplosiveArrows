@@ -1,4 +1,4 @@
-package com.darkbytelabs.explosivearrows;
+package com.boothousegaming.explosivearrows;
 
 import java.util.Arrays;
 
