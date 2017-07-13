@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
@@ -44,7 +45,8 @@ public class ExplosiveArrows extends JavaPlugin implements Listener {
 		itemMeta.setLore(Arrays.asList("Explosive"));
 		explosiveArrow.setItemMeta(itemMeta);
 		
-		recipe = new ShapedRecipe(explosiveArrow);
+		NamespacedKey key = new NamespacedKey(this, this.getDescription().getName());
+		recipe = new ShapedRecipe(key, explosiveArrow);
 		recipe.shape("0G0", "0S0", "0F0");
 		recipe.setIngredient('G', Material.SULPHUR);
 		recipe.setIngredient('S', Material.STICK);
