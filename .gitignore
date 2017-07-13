@@ -49,3 +49,6 @@ Temporary Items
 # Build
 /bin/
 /target/
+
+# Development Environment
+.classpath
