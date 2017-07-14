@@ -99,8 +99,6 @@ public class ExplosiveArrows extends JavaPlugin implements Listener {
 				location = projectile.getLocation();
 				projectile.getWorld().createExplosion(location.getX(), location.getY(), location.getZ(), power, setFire, breakBlocks);
 				projectile.remove();
-				
-				
 			}
 		}
 	}
